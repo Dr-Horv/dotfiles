@@ -175,6 +175,7 @@ assign [class="(?i)google-chrome"] 1
 
 bindsym $mod+mod1+l exec "~/.bin/lock"
 
+# Function keys
 bindsym XF86AudioMute         exec --no-startup-id sh /home/horv/.bin/notify-volume.sh -t
 bindsym XF86AudioLowerVolume  exec --no-startup-id sh /home/horv/.bin/notify-volume.sh -d 5
 bindsym XF86AudioRaiseVolume  exec --no-startup-id sh /home/horv/.bin/notify-volume.sh -i 5
@@ -185,4 +186,9 @@ bindsym XF86KbdBrightnessUp   exec --no-startup-id sh /home/horv/.bin/kbdb_noti.
 bindsym XF86TouchpadToggle    exec --no-startup-id sh /home/horv/.bin/trackpad-toggle.sh
 bindsym XF86MonBrightnessUp   exec --no-startup-id sh /home/horv/.bin/nbright.sh -i 10
 bindsym XF86MonBrightnessDown exec --no-startup-id sh /home/horv/.bin/nbright.sh -d 10
+
+# Scratchpad
+exec --no-startup-id urxvtc -name scratchpad
+for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
+bindsym mod4+s [class="URxvt" instance="scratchpad"] scratchpad show
 
