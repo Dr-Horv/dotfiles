@@ -76,7 +76,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+q layout stacking
+bindsym $mod+Shift+q layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -181,14 +181,17 @@ bindsym XF86AudioLowerVolume  exec --no-startup-id sh /home/horv/.bin/notify-vol
 bindsym XF86AudioRaiseVolume  exec --no-startup-id sh /home/horv/.bin/notify-volume.sh -i 5
 bindsym XF86AudioNext         exec --no-startup-id sh /home/horv/.bin/mediacontroler.py next
 bindsym XF86AudioPrev         exec --no-startup-id sh /home/horv/.bin/mediacontroler.py next
-bindsym XF86KbdBrightnessDown exec --no-startup-id sh /home/horv/.bin/kbdb_noti.sh -d
-bindsym XF86KbdBrightnessUp   exec --no-startup-id sh /home/horv/.bin/kbdb_noti.sh -i
+bindsym XF86KbdBrightnessDown exec --no-startup-id asus-kbd-backlight down
+bindsym XF86KbdBrightnessUp   exec --no-startup-id asus-kbd-backlight up
 bindsym XF86TouchpadToggle    exec --no-startup-id sh /home/horv/.bin/trackpad-toggle.sh
 bindsym XF86MonBrightnessUp   exec --no-startup-id sh /home/horv/.bin/nbright.sh -i 10
 bindsym XF86MonBrightnessDown exec --no-startup-id sh /home/horv/.bin/nbright.sh -d 10
 
+bindsym $mod+F5 exec --no-startup-id sh /home/horv/.bin/brightness.sh down
+bindsym $mod+F6 exec --no-startup-id sh /home/horv/.bin/brightness.sh up
+
 # Scratchpad
-exec --no-startup-id urxvtc -name scratchpad
+exec --no-startup-id urxvt -name scratchpad
 for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
 bindsym mod4+s [class="URxvt" instance="scratchpad"] scratchpad show
 

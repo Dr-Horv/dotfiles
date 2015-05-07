@@ -87,6 +87,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' special-dirs true
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zsh_aliases
 eval $(dircolors ~/.dircolors)
 setopt no_share_history
 export EDITOR='vim'
