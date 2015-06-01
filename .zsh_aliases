@@ -4,4 +4,5 @@
 alias gs="gst"
 alias irc="ssh johandf@hubben.chalmers.it"
 alias irkk="irc"
+alias vs="vagrant ssh"
 
