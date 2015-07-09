@@ -1,10 +1,19 @@
 
 #alias zshconfig="mate ~/.zshrc"
 
-alias gs="gst"
+#Git aliases
+alias gs="git status"
+alias gcd="git checkout develop"
+alias gd="git diff"
+alias gdc="git diff --cached"
+
 alias irc="ssh johandf@hubben.chalmers.it"
 alias irkk="irc"
+
+#Vagrant
 alias vs="vagrant ssh"
 alias vvs="vagrant up && vs"
-alias cdm="cd work/merithon/"
 
+#Work related
+alias cdm="cd ~/work/merithon/"
+alias cdma="cd ~/work/merithon/merithon-app"

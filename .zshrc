@@ -50,6 +50,8 @@ plugins=(git sudo)
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/home/horv/dev/android-sdk-linux/tools:$PATH
+export PATH=/home/horv/dev/android-sdk-linux/platform-tools:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 
