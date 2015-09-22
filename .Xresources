@@ -1,3 +1,4 @@
+
 xterm.background: black
 xterm.foreground: white
 
@@ -26,7 +27,7 @@ URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 ! TEST: http://www.google.com
 !
 URxvt.scrollBar: off
-URxvt.saveLines: 1000
+URxvt.saveLines: 10000
 
 !#URxvt.depth: 32
 
@@ -104,7 +105,7 @@ URxvt.intensityStyles: false
 URxvt*background:              S_base03
 URxvt*foreground:              S_base2
 !URxvt*fading:                  40
-URxvt*fadeColor:               S_base03
+URxvt*fadeColor:               S_base0
 URxvt*cursorColor:             S_base1
 URxvt*pointerColorBackground:  S_base01
 URxvt*pointerColorForeground:  S_base1
@@ -118,7 +119,7 @@ URxvt*color5:                  S_magenta
 URxvt*color6:                  S_cyan
 URxvt*color7:                  S_base2
 URxvt*color9:                  S_orange
-URxvt*color8:                  S_base03
+URxvt*color8:                  S_base0
 URxvt*color10:                 S_base01
 URxvt*color11:                 S_base00
 URxvt*color12:                 S_base0
@@ -130,3 +131,4 @@ URxvt*color15:                 S_base3
 URxvt.colorIT:      #87af5f
 URxvt.colorBD:      #d7d7d7
 URxvt.colorUL:      #87afd7
+

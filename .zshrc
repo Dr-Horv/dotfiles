@@ -52,6 +52,11 @@ plugins=(git sudo)
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/home/horv/dev/android-sdk-linux/tools:$PATH
 export PATH=/home/horv/dev/android-sdk-linux/platform-tools:$PATH
+export PATH=/home/horv/chalmers/2015/lp1/sefm/spin/jspin:$PATH
+export PATH=/home/horv/chalmers/2015/lp1/sefm/spin/Spin/Src6.4.3:$PATH
+
+export ANDROID_HOME=/home/horv/dev/android-sdk-linux
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 
@@ -96,3 +101,6 @@ export EDITOR='vim'
 typeset -U path
 path=(~/.bin $path)
 export PATH
+
+quote
+
