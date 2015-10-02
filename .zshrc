@@ -102,5 +102,6 @@ typeset -U path
 path=(~/.bin $path)
 export PATH
 
+source /home/horv/.dotfiles/z.sh
 quote
 
