@@ -23,14 +23,14 @@ discard_sources=true
 eager_sudo=false
 
 # When to edit PKGBUILDs. One of prompt, always, or never.
-edit_pkgbuilds='prompt'
+edit_pkgbuilds='never'
 
 # Space separated list of packages to ignore.
 ignore_packages=''
 
 # If you choose to discard sources, you can separately choose to NOT
 # discard sources for development packages.
-keep_devels=true
+keep_devels=false
 
 # Space separated list of packages for which sources will be kept
 # regardless of discard_sources.
