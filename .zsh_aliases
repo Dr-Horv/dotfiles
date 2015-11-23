@@ -10,6 +10,9 @@ alias gdc="git diff --cached"
 alias irc="ssh johandf@hubben.chalmers.it"
 alias irkk="irc"
 
+#Monitor manangement
+alias mup="xrandr --output HDMI2 --mode 1920x1080 --above eDP1"
+
 #Vagrant
 alias vs="vagrant ssh"
 alias vvs="vagrant up && vs"
