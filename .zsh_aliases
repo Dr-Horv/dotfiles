@@ -20,3 +20,7 @@ alias vvs="vagrant up && vs"
 #Work related
 alias cdm="cd ~/work/merithon/"
 alias cdma="cd ~/work/merithon/merithon-app"
+
+#ADB
+alias adbr="sudo adb kill-server && sudo adb start-server"
+alias adbrev="adb reverse tcp:8081 tcp:8081"
