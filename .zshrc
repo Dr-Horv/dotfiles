@@ -101,7 +101,7 @@ export EDITOR='vim'
 typeset -U path
 path=(~/.bin $path)
 export PATH
-
+export REACT_EDITOR=idea
 source /home/horv/.dotfiles/z.sh
 quote
 
