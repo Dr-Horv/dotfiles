@@ -1,10 +1,11 @@
 
-xterm.background: black
-xterm.foreground: white
+! xterm.background: black
+! xterm.foreground: white
 
 URxvt.loginshell: false
 URxvt.internalborder: 0
 URxvt.underlinecolor: #999999
+
 URxvt.cutchars: "`\"()*,<>[]{}|'"
 !URxvt.print-pipe: cat >/tmp/xxx
 URxvt.visualBell: false
@@ -131,4 +132,3 @@ URxvt*color15:                 S_base3
 URxvt.colorIT:      #87af5f
 URxvt.colorBD:      #d7d7d7
 URxvt.colorUL:      #87afd7
-

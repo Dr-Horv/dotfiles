@@ -45,17 +45,14 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo)
+plugins=(git sudo zsh-syntax-highlighting)
 
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/home/horv/dev/android-sdk-linux/tools:$PATH
-export PATH=/home/horv/dev/android-sdk-linux/platform-tools:$PATH
-export PATH=/home/horv/chalmers/2015/lp1/sefm/spin/jspin:$PATH
-export PATH=/home/horv/chalmers/2015/lp1/sefm/spin/Spin/Src6.4.3:$PATH
-
-export ANDROID_HOME=/home/horv/dev/android-sdk-linux
+export PATH=/opt/android-sdk/tools:$PATH
+export PATH=/opt/android-sdk/platform-tools:$PATH
+export ANDROID_HOME=/opt/android-sdk
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -92,10 +89,9 @@ fi
 
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' special-dirs true
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_aliases
-eval $(dircolors ~/.dircolors)
+#eval $(dircolors ~/.dircolors)
 setopt no_share_history
 export EDITOR='vim'
 typeset -U path
@@ -103,5 +99,5 @@ path=(~/.bin $path)
 export PATH
 export REACT_EDITOR=idea
 source /home/horv/.dotfiles/z.sh
-quote
+# quote
 

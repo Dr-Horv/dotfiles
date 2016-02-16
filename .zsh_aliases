@@ -24,3 +24,8 @@ alias cdma="cd ~/work/merithon/merithon-app"
 #ADB
 alias adbr="sudo adb kill-server && sudo adb start-server"
 alias adbrev="adb reverse tcp:8081 tcp:8081"
+
+#Nice
+alias weather="curl wttr.in"
+alias aliasedit="vim $HOME/.zsh_aliases && source $HOME/.zsh_aliases && rehash"
+alias subl="subl3"
