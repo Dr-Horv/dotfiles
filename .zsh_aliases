@@ -29,3 +29,7 @@ alias adbrev="adb reverse tcp:8081 tcp:8081"
 alias weather="curl wttr.in"
 alias aliasedit="vim $HOME/.zsh_aliases && source $HOME/.zsh_aliases && rehash"
 alias subl="subl3"
+
+#Bluetooth
+alias btu="/usr/bin/dbus-send --system --type=method_call --dest=org.bluez /org/bluez/hci0 org.freedesktop.DBus.Properties.Set string:org.bluez.Adapter1 string:Powered variant:boolean:true"
+alias btd="/usr/bin/dbus-send --system --type=method_call --dest=org.bluez /org/bluez/hci0 org.freedesktop.DBus.Properties.Set string:org.bluez.Adapter1 string:Powered variant:boolean:false"

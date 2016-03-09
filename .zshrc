@@ -49,6 +49,9 @@ plugins=(git sudo zsh-syntax-highlighting)
 
 # User configuration
 
+export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.5.1
+
+export PATH=$EC2_HOME/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/opt/android-sdk/tools:$PATH
 export PATH=/opt/android-sdk/platform-tools:$PATH
