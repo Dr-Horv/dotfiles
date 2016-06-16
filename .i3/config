@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec compton -CGb 
+exec compton -CGb
 
 set $mod Mod4
 
@@ -170,10 +170,10 @@ bar {
             statusline #839496
             separator  #b58900
             # colorclass       <border> <background> <text>
-            focused_workspace  #b58900  #002b36      #b58900
-            active_workspace   #002b36  #002b36      #ffffff
-            inactive_workspace #002b36  #002b36      #657b83
-            urgent_workspace   #b58900  #dc322f      #fdf6e3
+            #focused_workspace  #b58900  #002b36      #b58900
+            #active_workspace   #002b36  #002b36      #ffffff
+            inactive_workspace  #002b36  #002b36      #657b83
+            #urgent_workspace   #b58900  #dc322f      #fdf6e3
         }
 }
 
@@ -202,4 +202,4 @@ bindsym $mod+F6 exec --no-startup-id sh /home/horv/.bin/brightness.sh up
 # Scratchpad
 exec --no-startup-id urxvt -name scratchpad
 for_window [class="^URxvt$" instance="scratchpad"] border 1pixel; move scratchpad
-bindsym mod4+s [class="URxvt" instance="scratchpad"] scratchpad show
+bindsym $mod+s [class="URxvt" instance="scratchpad"] scratchpad show
