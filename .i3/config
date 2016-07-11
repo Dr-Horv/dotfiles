@@ -182,6 +182,7 @@ client.unfocused #002b36 #002b36  #657b83
 # Horvstuff
 for_window [class="(?i)google-chrome"] border none
 for_window [class="(?i)atom"] border none
+for_window [class="(?i)jetbrains-.*"] border none
 for_window [title="(?i)ssh johandf@hubben.chalmers.it"] border none
 
 bindsym $mod+c exec google-chrome
