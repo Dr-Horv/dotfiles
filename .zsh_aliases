@@ -31,6 +31,7 @@ alias aliasedit="vim $HOME/.zsh_aliases && source $HOME/.zsh_aliases && rehash"
 alias subl="subl3"
 alias pp="pastebincl -e 1H -p"
 alias nt="( urxvt & ) &>/dev/null"
+alias serve="python3 -m http.server"
 
 #Bluetooth
 alias btu="/usr/bin/dbus-send --system --type=method_call --dest=org.bluez /org/bluez/hci0 org.freedesktop.DBus.Properties.Set string:org.bluez.Adapter1 string:Powered variant:boolean:true"

@@ -190,7 +190,7 @@ bindsym $mod+c exec google-chrome
 #assign [class="(?i)google-chrome"] 1
 
 bindsym $mod+mod1+l exec "~/.bin/lock"
-bindsym --release $mod+Print --no-startup-id exec "~/.bin/printscreen.sh"
+bindsym --release $mod+Print exec "~/.bin/printscreen.sh"
 
 # Function keys
 bindsym XF86AudioMute         exec --no-startup-id sh /home/horv/.bin/notify-volume.sh -t
