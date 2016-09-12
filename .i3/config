@@ -204,8 +204,8 @@ bindsym XF86TouchpadToggle    exec --no-startup-id sh /home/horv/.bin/trackpad-t
 bindsym XF86MonBrightnessUp   exec --no-startup-id sh /home/horv/.bin/kb_brightness.sh up
 bindsym XF86MonBrightnessDown exec --no-startup-id sh /home/horv/.bin/kb_brightness.sh down
 
-bindsym $mod+F5 exec --no-startup-id sh /home/horv/.bin/brightness.sh down
-bindsym $mod+F6 exec --no-startup-id sh /home/horv/.bin/brightness.sh up
+bindsym $mod+F5 exec --no-startup-id xbacklight -dec 10
+bindsym $mod+F6 exec --no-startup-id xbacklight -inc 10
 
 # Scratchpad
 exec --no-startup-id urxvt -name scratchpad
