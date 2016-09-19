@@ -33,7 +33,7 @@ case "$1" in
     AMIXARG="${2}%-"
     ;;
   '-p'|'--print')
-    AMIXOUT="$(amixer get "$IF" | tail -n 1)"
+    AMIXOUT="$(amixer -c 1 get "$IF" | tail -n 1)"
     MUTE="$(cut -d '[' -f 4 <<<"$AMIXOUT")"
     if [ "$MUTE" == "off]" ]; then
         echo off
@@ -55,9 +55,17 @@ case "$1" in
 esac
 
 #Actual volume changing (readability low)
+BEFORE="$(amixer -c 1 get "$IF" | tail -n 1)"
+MUTED_BEFORE="$(cut -d '[' -f 4 <<<"$BEFORE")"
 
 AMIXOUT="$(amixer -c 1 set "$IF" "$AMIXARG" | tail -n 1)"
+if [ "$MUTED_BEFORE" == "off]" ]; then
+  amixer -c 1 set Speaker unmute &> /dev/null
+  amixer -c 1 set Headphone unmute &> /dev/null
+fi
+
 MUTE="$(cut -d '[' -f 4 <<<"$AMIXOUT")"
+
 VOL="$(cut -d '[' -f 2 <<<"$AMIXOUT" | sed 's/%.*//g')"
 
 # Force conky to update
