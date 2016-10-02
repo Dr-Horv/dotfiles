@@ -70,7 +70,7 @@ URxvt.pointerBlank:         true
 #define S_magenta       #d33682
 #define S_violet        #6c71c4
 #define S_blue          #268bd2
-#define S_cyan          #2aa198
+#define S_cyan          #39dbcf
 #define S_green         #859900
 
 
