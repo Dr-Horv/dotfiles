@@ -112,3 +112,6 @@ source /home/horv/.dotfiles/z.sh
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+setopt HIST_FIND_NO_DUPS
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
