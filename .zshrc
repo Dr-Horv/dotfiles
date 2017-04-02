@@ -59,8 +59,9 @@ export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.5.1
 export PATH=$EC2_HOME/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/opt/android-sdk/tools:$PATH
-export PATH=/opt/android-sdk/platform-tools:$PATH
 export ANDROID_HOME=/opt/android-sdk
+export PATH=/opt/android-sdk/platform-tools:$PATH
+export PATH=$HOME/.cabal/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

@@ -1,5 +1,6 @@
 
 #alias zshconfig="mate ~/.zshrc"
+alias gf="~/.cabal/bin/gf"
 
 #Git aliases
 alias gs="git status"
