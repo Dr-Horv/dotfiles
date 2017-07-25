@@ -10,21 +10,21 @@ URxvt.cutchars: "`\"()*,<>[]{}|'"
 !URxvt.print-pipe: cat >/tmp/xxx
 URxvt.visualBell: false
 URxvt.urgentOnBell: true
-URxvt.perl-ext-common: default,clipboard,confirm-paste,url-select,bell-command
+URxvt.perl-ext-common: default,matcher,confirm-paste,selection-autotransform
 URxvt.termName: rxvt-256color
 
 ! --[ URxvt - URL Handling ]-------------------------------
-URxvt.url-select.launcher: xdg-open
-URxvt.url-select.underline: true
-URxvt.url-select.button: 1
+URxvt.url-launcher: xdg-open
+URxvt.matcher.button: 1
 
 ! "Hard" reset on ctrl-k
 !URxvt.keysym.C-k:   echo -ne '\\033c'\n
 
-URxvt.keysym.M-u:   perl:url-select:select_next
-URxvt.keysym.M-c:   perl:clipboard:copy
-URxvt.keysym.M-v:   perl:clipboard:paste
-URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+!URxvt.keysym.M-u:   perl:url-select:select_next
+URxvt.keysym.M-c: eval:selection_to_clipboard
+URxvt.keysym.M-v: eval:paste_clipboard
+URxvt.keysym.M-V: eval:paste_primary
+
 ! TEST: http://www.google.com
 !
 URxvt.scrollBar: off
@@ -38,15 +38,16 @@ URxvt.saveLines: 10000
 !! Xft settings
 !!-------------------------------------------------------------------------------
 !
-Xft.dpi:                    96
+Xft.dpi:                    192
 Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
 URxvt.allow_bold:           false
-URxvt.font: xft:Source Code Pro:style=Regular:size=16
+URxvt.font: xft:Source Code Pro:style=Regular:size=14, xft:Unifont:size=14
 ! URxvt.boldFont: xft:Liberation Mono:bold:size=16
+
 
 ! Fix font space
 URxvt*letterSpace: -1
