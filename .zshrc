@@ -54,6 +54,9 @@ plugins=(git sudo zsh-syntax-highlighting)
 
 # User configuration
 
+export SPRING_HOME=$HOME/.springcli/
+export PATH=$SPRING_HOME/bin:$PATH
+
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.5.1
 
 export PATH=$EC2_HOME/bin:$PATH
@@ -105,13 +108,23 @@ setopt no_share_history
 export EDITOR='vim'
 typeset -U path
 path=(~/.bin $path)
+path=(/home/horv/.local/share/umake/bin $path)
 export PATH
 export REACT_EDITOR=idea
 source /home/horv/.dotfiles/z.sh
 # quote
 
+TERM=rxvt-unicode
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 setopt HIST_FIND_NO_DUPS
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/horv/.sdkman"
+[[ -s "/home/horv/.sdkman/bin/sdkman-init.sh" ]] && source "/home/horv/.sdkman/bin/sdkman-init.sh"
