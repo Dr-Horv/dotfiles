@@ -24,6 +24,12 @@ URxvt.matcher.button: 1
 URxvt.keysym.M-c: eval:selection_to_clipboard
 URxvt.keysym.M-v: eval:paste_clipboard
 URxvt.keysym.M-V: eval:paste_primary
+URxvt.keysym.M-Home: eval:scroll_to_top
+URxvt.keysym.M-End:  eval:scroll_to_bottom
+URxvt.keysym.M-S-Up: eval:scroll_up 5
+URxvt.keysym.M-S-Down: eval:scroll_down 5
+URxvt.keysym.M-C-Up: eval:scroll_up_pages 1
+URxvt.keysym.M-C-Down: eval:scroll_down_pages 1
 
 ! TEST: http://www.google.com
 !
