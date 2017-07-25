@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEVICE="FocalTechPS/2 FocalTech FocalTech Touchpad"
+DEVICE="DLL075B:01 06CB:76AF Touchpad"
 
 enabledString=$(xinput list-props "$DEVICE" | grep "Device Enabled")
 enabled=false
