@@ -26,6 +26,9 @@ alias cdma="cd ~/work/merithon/merithon-app"
 alias adbr="sudo adb kill-server && sudo adb start-server"
 alias adbrev="adb reverse tcp:8081 tcp:8081"
 
+#Devtools
+alias swagger-codegen="java -jar /home/horv/.bin/devtools/swagger-codegen-cli.jar"
+
 #Nice
 alias weather="curl wttr.in"
 alias aliasedit="vim $HOME/.zsh_aliases && source $HOME/.zsh_aliases && rehash"
@@ -33,7 +36,7 @@ alias subl="subl3"
 alias pp="pastebincl -e 1H -p"
 alias nt="( urxvt & ) &>/dev/null"
 alias serve="python3 -m http.server"
-alias idea="(setsid jetbrains-idea &)"
+alias idea="(setsid jetbrains-idea &) &> /dev/null"
 
 #Bluetooth
 alias btu="/usr/bin/dbus-send --system --type=method_call --dest=org.bluez /org/bluez/hci0 org.freedesktop.DBus.Properties.Set string:org.bluez.Adapter1 string:Powered variant:boolean:true"
