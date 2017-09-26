@@ -16,6 +16,7 @@ usage() {
   echo "     -d, --decrease - decrease volume by \`argument'"
   echo "     -p, --print    - print current status/volume only"
   echo "     -t, --toggle   - toggle mute on and off"
+  echo "     -m, --mute     - mutes volume"
   echo "     -h, --help     - display this"
   exit
 }
@@ -46,6 +47,9 @@ case "$1" in
   '-t'|'--toggle')
     AMIXARG="toggle"
     ;;
+  '-m'|'--mute')
+    AMIXARG="mute"
+    ;;
   ''|'-h'|'--help')
     usage
     ;;
@@ -62,6 +66,11 @@ AMIXOUT="$(amixer -c 0 set "$IF" "$AMIXARG" | tail -n 1)"
 if [ "$MUTED_BEFORE" == "off]" ]; then
   amixer -c 0 set Speaker unmute &> /dev/null
   amixer -c 0 set Headphone unmute &> /dev/null
+fi
+
+if [ "$AMIXARG" == "mute" ]; then
+  amixer -c 0 set Speaker mute &> /dev/null
+  amixer -c 0 set Headphone mute &> /dev/null
 fi
 
 MUTE="$(cut -d '[' -f 4 <<<"$AMIXOUT")"
