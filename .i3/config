@@ -11,7 +11,8 @@
 
 exec compton -CGb
 exec twmnd
-exec /home/horv/.bin/notify-volume.sh -m
+exec --no-startup-id feh --bg-scale /home/horv/.background.jpg
+exec "sh -c 'sleep 3; exec /home/horv/.bin/notify-volume.sh -m'"
 
 set $mod Mod4
 

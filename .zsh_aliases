@@ -12,7 +12,7 @@ alias irc="ssh johandf@hubben.chalmers.it"
 alias irkk="irc"
 
 #Monitor manangement
-alias mup="xrandr --output HDMI2 --mode 1920x1080 --above eDP1"
+alias mup="xrandr --output DP1-2 --above eDP1"
 
 #Vagrant
 alias vs="vagrant ssh"
