@@ -1,3 +1,6 @@
+# Uncomment for profiling startup
+# zmodload zsh/zprof
+
 # Path to your oh-my-zsh installation.
 ZSH=$HOME/.oh-my-zsh
 
@@ -10,7 +13,6 @@ ZSH_THEME="robbyrussell"
 #FPATH=~/
 #autoload .chanette
 #.chanette
-
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,22 +54,7 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git sudo zsh-syntax-highlighting zsh-autosuggestions)
 
-# User configuration
-
-export SPRING_HOME=$HOME/.springcli/
-export PATH=$SPRING_HOME/bin:$PATH
-
-export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.5.1
-
-export PATH=$EC2_HOME/bin:$PATH
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/opt/android-sdk/tools:$PATH
-export ANDROID_HOME=/opt/android-sdk
-export PATH=/opt/android-sdk/platform-tools:$PATH
-export PATH=$HOME/.cabal/bin:$PATH
-
 # export MANPATH="/usr/local/man:$MANPATH"
-
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -109,8 +96,6 @@ export EDITOR='vim'
 typeset -U path
 path=(~/.bin $path)
 path=(/home/horv/.local/share/umake/bin $path)
-export PATH
-export REACT_EDITOR=idea
 source /home/horv/.dotfiles/z.sh
 # quote
 
@@ -118,13 +103,21 @@ TERM=rxvt-unicode
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 setopt HIST_FIND_NO_DUPS
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+
+# Tingcore
+source $HOME/.tingcorerc 
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/horv/.sdkman"
 [[ -s "/home/horv/.sdkman/bin/sdkman-init.sh" ]] && source "/home/horv/.sdkman/bin/sdkman-init.sh"
+
+# Uncomment for profiling startup time
+# zprof
